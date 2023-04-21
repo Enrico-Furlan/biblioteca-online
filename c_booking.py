@@ -62,6 +62,6 @@ class tobook:
 
 
 if __name__ == "__main__":
-    book = tobook(2, 1, "2023-03-31")
+    book = tobook(1, 1, "2023-03-25")
     book.booking()
-    book.restitution()
+    # book.restitution()

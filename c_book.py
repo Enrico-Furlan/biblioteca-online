@@ -89,5 +89,7 @@ class Book:
 
 if __name__ == "__main__":
     libro = Book("ciao", "Verga", 20, 112312321, 7, 1, 1)
-    print(libro.is_rentable())
-    print(libro.is_low())
+    libro.insert()
+    libro.delete()
+    # print(libro.is_rentable())
+    # print(libro.is_low())
