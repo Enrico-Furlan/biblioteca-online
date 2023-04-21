@@ -1,0 +1,11 @@
+alter:
+
+bisogna trasformare la stringa query per gestire la lista di chiavi primarie.
+
+insert:
+
+da completare la gestione di un numero qualunque di colonne, tramite ciclo oppure modulo specifico?
+
+classes/shoppingcart:
+
+perché ci sono i set,get in entrambi i modi? (sia diretti che tramite @property).
