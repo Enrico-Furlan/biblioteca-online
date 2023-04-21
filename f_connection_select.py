@@ -50,11 +50,12 @@ def recSelect(tbName, requirementsDict, fieldName):
                     query +=" '"+ requirementsDict.get(key) + "' AND "
                 else:
                    query += str(requirementsDict.get(key)) + " AND "                    
-            query = query[:-4]
+            query = query[:-4] #rimozione degli ultimi 4 caratteri in quanto è presente un AND di troppo nella query
             print(query)
             cursor.execute(query)
             result = cursor.fetchall()
             diz = []
+            #cast del risultato in un dizionario
             for row in result:
                 diz.append(dict((k, v) for k, v in row.items() if v is not None))
         return diz
