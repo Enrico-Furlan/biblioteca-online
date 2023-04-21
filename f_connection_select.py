@@ -1,10 +1,11 @@
 import mysql.connector
 from mysql.connector import Error
+import credenziali
 
-hostname = "sql7.freemysqlhosting.net"
-user = "sql7613816"
-pw = "eZlv78fVAR"
-database = "sql7613816"
+hostname = credenziali.hostname
+user = credenziali.user
+pw = credenziali.pw
+database = credenziali.database
 
 
 def hostConnection(hostName, userName, userPassword):

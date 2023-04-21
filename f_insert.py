@@ -1,11 +1,12 @@
 from sqlalchemy import create_engine, URL, insert, MetaData
+import credenziali
 
 url_object = URL.create(
     "mysql",
-    username="root",
-    password="",
-    host="localhost",
-    database="libreria"
+    username=credenziali.user,
+    password=credenziali.pw,
+    host=credenziali.hostname,
+    database=credenziali.database
 )
 
 engine = create_engine(url_object)
