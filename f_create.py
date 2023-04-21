@@ -4,7 +4,7 @@ from mysql.connector import Error
 from f_connection_select import dbConnection, hostConnection, fastConnect
 
 def dbCreate(db_name):
-    connection = hostConnection("localhost", "root", "")
+    connection = fastConnect()
     cursor = connection.cursor()
     query = "CREATE DATABASE " + db_name
     try:
@@ -14,7 +14,7 @@ def dbCreate(db_name):
         print(f"The error '{e}' occurred")
 
 def tbCreate(tb_name, col_attr):
-    connection = dbConnection("localhost", "root", "", "Libreria")
+    connection = fastConnect()
     cursor = connection.cursor()
     query = "CREATE TABLE IF NOT EXISTS " + tb_name + " ( "
     for i in range(len(col_attr)):
@@ -90,7 +90,7 @@ tb_prenotazione = [("ID_cliente", "int", False, True, True, "cliente", "ID_clien
                    ("data_richiesta", "date", False, True, False, "", "")]
 
 if __name__ == "__main__":
-  dbCreate("Libreria")
+  #dbCreate("Libreria")
   tbCreate("libro", tb_libro)
   tbCreate("cliente", tb_cliente)
   tbCreate("noleggio", tb_noleggio)
