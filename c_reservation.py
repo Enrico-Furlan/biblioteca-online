@@ -34,6 +34,12 @@ class reservation:
             now = datetime.now()
             dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
             print("date and time =", dt_string)
+            self.id_client = id_client
+            self.id_book = id_book
+            self.booking_date = now
+            print("Prenotazione creata con successo.")
+        else:
+            print("Il libro non è disponibile per la prenotazione")
 
             
 #crea prenotazione
