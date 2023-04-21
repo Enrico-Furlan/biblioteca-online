@@ -46,7 +46,7 @@ def recSelect(tbName, requirementsDict, fieldName):
             query = "SELECT " + fieldName + " FROM "+ tbName + " WHERE "
             for key in sorted(requirementsDict):
                 query += key + " = " 
-                if isinstance(requirementsDict.get(key),str):
+                if isinstance(requirementsDict.get(key),str): #controlla se la variabile richiesta è una stringa e se lo è aggiunge gli apicetti
                     query +=" '"+ requirementsDict.get(key) + "' AND "
                 else:
                    query += str(requirementsDict.get(key)) + " AND "                    
